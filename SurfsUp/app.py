@@ -40,6 +40,7 @@ app = Flask(__name__)
 # Flask Routes
 #################################################
 
+
 # Starting at the Home Page for Honolulu Hawaii Climate API and listing all the avaliable routes
 @app.route('/')
 def home_page():
@@ -108,7 +109,7 @@ def tobs():
     tobs_dict = {date: tobs for date, tobs in tobs_data}
 
     # Return as JSON
-    return jsonify(tobs_data)
+    return jsonify(tobs_dict)
 
 # Start and end dates link
 # Return JSON list of the min avg, and max temps
